@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 /ex1.html
+=======
+node_modules/
+.env
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.log
+>>>>>>> 736f2ed44b97ffabaa573fccb9f92df5b4ba85dc
