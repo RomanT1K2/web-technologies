@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мондріан</title>
+
+    <style>
+        body {
+            background: #f7f4e5;
+            margin: 20px;
+        }
+
+        .picture {
+            position: relative;
+            width: 720px;
+            height: 680px;
+        }
+
+        table {
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            width: 560px;
+            height: 560px;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 8px solid #000000;
+        }
+
+        .yellow {
+            background: #fffa69;
+        }
+
+        .blue {
+            background: #074481;
+        }
+
+        .red {
+            background: #ff5b2d;
+        }
+
+        .black {
+            background: #000000;
+        }
+
+        .white {
+            background: #ffffff;
+        }
+
+        /* ===== ДОДАТКОВІ ЛІНІЇ, щоб не виглядало як табличка 
+        і цей комент я сам(а) написало ===== */
+
+        /* лінія зліва зверху */
+        .line-left-top {
+            position: absolute;
+            left: 0;
+            top: 70px;
+            width: 70px;
+            height: 8px;
+            background: #000000;
+        }
+
+        /* вертикальна лінія над таблицею */
+        .line-top {
+            position: absolute;
+            left: 210px;
+            top: 0;
+            width: 8px;
+            height: 70px;
+            background: #000000;
+        }
+
+        /* верхня вертикальна лінія справа */
+        .line-top-right {
+            position: absolute;
+            left: 410px;
+            top: 0;
+            width: 8px;
+            height: 70px;
+            background: #000000;
+        }
+
+        /* горизонтальна лінія справа від жовтого */
+        .line-right-top {
+            position: absolute;
+            left: 630px;
+            top: 70px;
+            width: 90px;
+            height: 8px;
+            background: #000000;
+        }
+
+        /* лінія зліва посередині */
+        .line-left-middle {
+            position: absolute;
+            left: 0;
+            top: 240px;
+            width: 70px;
+            height: 8px;
+            background: #000000;
+        }
+
+        /* вертикальна лінія праворуч */
+        .line-right-middle {
+            position: absolute;
+            left: 520px;
+            top: 240px;
+            width: 8px;
+            height: 175px;
+            background: #000000;
+        }
+
+        /* нижня горизонтальна лінія праворуч */
+        .line-right-bottom {
+            position: absolute;
+            left: 630px;
+            top: 415px;
+            width: 90px;
+            height: 8px;
+            background: #000000;
+        }
+
+        /* вертикальна лінія внизу */
+        .line-bottom {
+            position: absolute;
+            left: 240px;
+            top: 630px;
+            width: 8px;
+            height: 50px;
+            background: #000000;
+        }
+
+        /* жовта частина, що виходить вниз */
+        .line-yellow-left {
+            position: absolute;
+            left: 0;
+            top: 510px;
+            width: 70px;
+            height: 170px;
+            background: #fffa69;
+            border-right: 8px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="picture">
+
+    <!-- Додаткові чорні лінії -->
+    <div class="line-left-top"></div>
+    <div class="line-top"></div>
+    <div class="line-top-right"></div>
+    <div class="line-right-top"></div>
+    <div class="line-left-middle"></div>
+    <div class="line-right-middle"></div>
+    <div class="line-right-bottom"></div>
+    <div class="line-bottom"></div>
+
+    <!-- Жовта частина, що виходить за межі -->
+    <div class="line-yellow-left"></div>
+
+    <table>
+        <tr>
+            <td class="white" rowspan="2"></td>
+
+            <td class="red" colspan="2" rowspan="3"></td>
+
+            <td class="yellow" rowspan="2"></td>
+        </tr>
+
+        <tr></tr>
+
+        <tr>
+            <td class="white"></td>
+            <td class="white"></td>
+        </tr>
+
+        <tr>
+            <td class="white"></td>
+            <td class="black" colspan="2" rowspan="2"></td>
+            <td class="white"></td>
+        </tr>
+
+        <tr>
+            <td class="yellow"></td>
+            <td class="blue" rowspan="2"></td>
+        </tr>
+
+        <tr>
+            <td class="white"></td>
+            <td class="black"></td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
