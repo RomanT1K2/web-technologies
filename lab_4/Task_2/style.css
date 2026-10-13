@@ -1,0 +1,42 @@
+.recipe-card {
+    border: 1px solid #790ccb;
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.main-title {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.ingredient {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.divider {
+    border: 0;
+    height: 4px;
+    background-color: green;
+    margin: 20px 0;
+}
+
+.footer-note {
+    font-style: italic;
+    font-size: 16px;
+}

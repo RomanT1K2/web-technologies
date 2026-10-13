@@ -1,0 +1,50 @@
+/* 2. Універсальний селектор */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px; /* або letter-spacing/margin за потреби */
+}
+
+/* 3. Селектори тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* 4. Селектор класів (червоний колір для 1-го та 3-го абзаців) */
+.red-text {
+    color: red;
+}
+
+/* 5. Заборона перенесення рядка */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 6. Селектор ідентифікатора (курсив та жирний) */
+#italic-bold {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 7. Тінь до тексту */
+.text-shadow {
+    text-shadow: 5px -5px 3px rgba(255, 0, 0, 0.4);
+}
+
+/* 8. Стилі 1-го блочного елемента */
+.div-style-1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+/* 9. Стилі 2-го блочного елемента */
+.div-style-2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
