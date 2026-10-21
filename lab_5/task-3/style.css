@@ -1,0 +1,133 @@
+/* ===== Загальні стилі сторінки ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;  /* шрифт */
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2c3e50;                              /* колір тексту */
+  background-color: #eef2f7;                   /* фон сторінки */
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+ 
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #1a5276;
+  background-color: #d6eaf8;
+  padding: 12px;
+  border-radius: 8px;
+}
+ 
+/* ===== Форма ===== */
+form {
+  display: inline-block;
+  text-align: left;
+  width: 560px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+ 
+fieldset {
+  margin-bottom: 14px;
+  background-color: #f8fbfe;
+  border: 1px solid #aed6f1;
+  border-radius: 8px;
+}
+ 
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  font-variant: small-caps;
+  color: #ffffff;
+  background-color: #2e86c1;
+  padding: 3px 12px;
+  border-radius: 5px;
+}
+ 
+/* ===== Підписи ===== */
+label {
+  display: block;
+  margin: 6px 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #34495e;
+}
+ 
+label.inline {
+  display: inline;
+  font-weight: normal;
+  margin-right: 12px;
+}
+ 
+p {
+  font-weight: bold;
+  color: #1f618d;
+  margin: 10px 0 4px;
+}
+ 
+/* ===== Поля вводу ===== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[list],
+textarea,
+select {
+  font-family: inherit;
+  font-size: 15px;
+  color: #17202a;
+  background-color: #fdfefe;
+  padding: 4px 6px;
+}
+ 
+input::placeholder,
+textarea::placeholder {
+  color: #95a5a6;
+  font-style: italic;
+}
+ 
+/* Фон поля при фокусі */
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #fcf3cf;
+  outline: 2px solid #f4d03f;
+}
+ 
+/* ===== Кнопки ===== */
+button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+ 
+button[type="submit"] { background-color: #28b463; }
+button[type="reset"]  { background-color: #cb4335; }
+button:hover          { opacity: 0.85; }
+ 
+/* ===== Посилання ===== */
+a {
+  font-size: 15px;
+  color: #1a5276;
+  text-decoration: none;
+}
+ 
+a:hover {
+  color: #c0392b;
+  text-decoration: underline;
+}
+ 

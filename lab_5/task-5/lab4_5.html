@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Завдання 5 — Блокова модель</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Демонстрація CSS-властивостей</h1>
+    <section>
+      <h2>1. box-sizing</h2>
+      <div class="box-demo content-box">
+        <strong>content-box</strong>
+        <p>Задана ширина: 300px</p>
+        <p>Загальна ширина: 300 + 40 + 10 = <b>350px</b></p>
+      </div>
+      <div class="box-demo border-box">
+        <strong>border-box</strong>
+        <p>Задана ширина: 300px</p>
+        <p>Загальна ширина: <b>300px</b></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. overflow</h2>
+      <div class="overflow-grid">
+        <div class="overflow-demo visible"><b>overflow: visible</b><p>Це довгий демонстраційний текст, який навмисно виходить за межі блока, щоб показати, що вміст залишається видимим. Додаткове речення допомагає створити прокручуваний або обрізаний вміст. CSS керує тим, як браузер відображає продовження цього тексту за заданою висотою контейнера.</p></div>
+        <div class="overflow-demo hidden"><b>overflow: hidden</b><p>Це довгий демонстраційний текст, який навмисно виходить за межі блока, щоб показати, що вміст залишається видимим. Додаткове речення допомагає створити прокручуваний або обрізаний вміст. CSS керує тим, як браузер відображає продовження цього тексту за заданою висотою контейнера.</p></div>
+        <div class="overflow-demo scroll"><b>overflow: scroll</b><p>Це довгий демонстраційний текст, який навмисно виходить за межі блока, щоб показати, що вміст залишається видимим. Додаткове речення допомагає створити прокручуваний або обрізаний вміст. CSS керує тим, як браузер відображає продовження цього тексту за заданою висотою контейнера.</p></div>
+        <div class="overflow-demo auto"><b>overflow: auto</b><p>Це довгий демонстраційний текст, який навмисно виходить за межі блока, щоб показати, що вміст залишається видимим. Додаткове речення допомагає створити прокручуваний або обрізаний вміст. CSS керує тим, як браузер відображає продовження цього тексту за заданою висотою контейнера.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. display — горизонтальне меню</h2>
+      <nav aria-label="Навчальне меню">
+        <ul class="menu">
+          <li><a href="#top">Головна</a></li>
+          <li><a href="#box-sizing">Теорія</a></li>
+          <li><a href="#overflow">Приклади</a></li>
+          <li><a href="#hidden">Прихований пункт</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+      <p class="note">Пункт «Прихований пункт» не займає місця: для нього використано <code>display: none</code>.</p>
+    </section>
+  </main>
+</body>
+</html>

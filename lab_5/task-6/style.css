@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 24px 12px;
+    color: #1c2c42;
+    font: 16px/1.55 "Segoe UI", Arial, sans-serif;
+    background-color: #1b2a41; /* Запасний колір на час завантаження зображення. */
+    background-image: url("img/page-background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, .88);
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 18px;
+    box-shadow: 0 18px 54px rgba(0, 0, 0, .2);
+}
+/* Якщо вікно вужче за 320px, min-width не дозволяє контейнеру звузитися далі — може з’явитися горизонтальна прокрутка. */
+
+.hero {
+    padding: 26px;
+    color: white;
+    background: linear-gradient(125deg, #164e63, #0f766e 60%, #0e7490);
+    border-radius: 12px;
+}
+.eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 800; color: #a7f3d0; }
+.hero h1 { margin: 0 0 12px; line-height: 1.2; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.hero p:last-child { margin-bottom: 0; color: #e0f2fe; }
+section { margin: 28px 0; }
+h2 { color: #115e59; }
+.section-note { color: #586b80; }
+
+.tag-row { padding: 12px; background: #dbeafe; border-radius: 8px; }
+.tag-row div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    padding: 8px 12px;
+    color: #1d4ed8;
+    background: #bfdbfe;
+    border-radius: 6px;
+}
+/* Для display:inline властивості width і height не задають розмір рядкового елемента; вертикальні margin теж не формують відступ, як у блоків. */
+.span-column { margin-top: 14px; }
+.span-column span {
+    display: block;
+    width: 150px;
+    margin: 5px 0;
+    padding: 7px 10px;
+    color: #064e3b;
+    background: #a7f3d0;
+    border-left: 4px solid #10b981;
+    border-radius: 4px;
+}
+
+.repeat-grid, .size-grid, .attachment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+.repeat-box {
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #a8bbc8;
+    border-radius: 8px;
+    background-color: #e0f2fe;
+    background-image: url("img/tile.svg");
+    background-position: center;
+    background-size: 60px 60px;
+}
+.repeat-box span, .size-box span {
+    display: inline-block;
+    padding: 6px 9px;
+    font-weight: 700;
+    color: #15324a;
+    background: rgba(255,255,255,.9);
+    border-radius: 5px;
+}
+.repeat-x { background-repeat: repeat-x; }
+.repeat-y { background-repeat: repeat-y; }
+.space { background-repeat: space; }
+.round { background-repeat: round; }
+
+.size-box {
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #0f766e;
+    border-radius: 8px;
+    background-image: url("img/cover-art.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contain { background-size: contain; }
+.cover { background-size: cover; }
+
+.attachment {
+    max-height: 150px;
+    padding: 12px;
+    overflow: auto;
+    border: 2px solid #588b91;
+    border-radius: 8px;
+    background-color: #dbeafe;
+    background-image: url("img/tile.svg");
+    background-position: top left;
+    background-repeat: repeat;
+}
+.attachment p { margin: 12px 0; }
+.scroll-bg { background-attachment: scroll; }
+.local-bg { background-attachment: local; }
+/* scroll: фон фіксується відносно області блока; local: фон прокручується разом із вмістом усередині блока. */
+
+footer { margin-top: 26px; padding-top: 15px; color: #526579; border-top: 1px solid #ced9e5; }
+
+@media (max-width: 650px) {
+    body { padding: 8px; }
+    .container { padding: 12px; }
+    .hero { padding: 20px 16px; }
+    .repeat-grid, .size-grid, .attachment-grid { grid-template-columns: 1fr; }
+}

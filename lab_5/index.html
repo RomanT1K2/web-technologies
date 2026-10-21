@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лабораторна робота №5 — CSS</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; color: #172033; background: #f1f5f9; }
+    header { padding: 42px 22px; color: white; background: linear-gradient(130deg, #172554, #0f766e); }
+    header, main { max-width: 1050px; margin: 0 auto; }
+    body > header { max-width: none; }
+    header h1 { margin: 0 0 8px; font-size: clamp(1.7rem, 4vw, 2.5rem); }
+    header p { margin: 0; color: #dbeafe; }
+    main { padding: 26px 18px 48px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+    article { background: white; border: 1px solid #dbe4ee; border-radius: 16px; padding: 20px; box-shadow: 0 8px 24px #0f172a0a; }
+    article h2 { margin-top: 0; font-size: 1.1rem; }
+    article p { color: #526078; min-height: 52px; }
+    a { color: #0f766e; font-weight: 700; }
+    .note { margin-top: 22px; padding: 16px 18px; border-left: 4px solid #0f766e; background: #e6fffb; border-radius: 8px; }
+    code { background: #e2e8f0; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Лабораторна робота №5</h1>
+    <p>CSS: блокова модель, відступи, відображення елементів і фон</p>
+  </header>
+  <main>
+    <div class="grid">
+      <article><h2>Завдання 1 — Списки</h2><p>Дворівневий список із фоновими іконками та оформленням елементів.</p><a href="task-1/lab4_1.html">Відкрити приклад →</a></article>
+      <article><h2>Завдання 2 — Таблиця</h2><p>Таблиця з градаціями кольору без класів та ідентифікаторів у CSS.</p><a href="task-2/lab4_2.html">Відкрити приклад →</a></article>
+      <article><h2>Завдання 3 — Анкета</h2><p>Форма опитування зі стилями у зовнішньому файлі.</p><a href="task-3/lab4_3.html">Відкрити приклад →</a></article>
+      <article><h2>Завдання 4 — Градієнти</h2><p>Чотири блоки з різними фонами, створеними без зображень.</p><a href="task-4/lab4_4.html">Відкрити приклад →</a></article>
+      <article><h2>Завдання 5 — Блокова модель</h2><p>Демонстрація box-sizing, overflow та display.</p><a href="task-5/lab4_5.html">Відкрити приклад →</a></article>
+      <article><h2>Завдання 6 — Сайт-візитівка</h2><p>Односторінковий сайт із фоновими зображеннями та їх властивостями.</p><a href="task-6/lab4_6.html">Відкрити приклад →</a></article>
+    </div>
+    <div class="note"><strong>Як запускати:</strong> розпакуйте архів і відкрийте цей <code>index.html</code> у браузері. Кожне завдання має власну папку з HTML-файлом, <code>style.css</code> та, де потрібно, каталогом <code>img</code> або <code>icons</code>.</div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Завдання 6 — Сайт-візитівка</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">Особиста сторінка</p>
+      <h1>Привіт! Я веброзробник-початківець</h1>
+      <p>Вивчаю HTML і CSS, створюю зрозумілі та доступні вебсторінки.</p>
+    </header>
+
+    <section>
+      <h2>Теги: inline та block</h2>
+      <p class="section-note">П’ять div нижче відображаються як inline, а п’ять span — як block.</p>
+      <div class="tag-row">
+        <div>div: HTML</div><div>div: CSS</div><div>div: Web</div><div>div: UI</div><div>div: Code</div>
+      </div>
+      <div class="span-column">
+        <span>span: Семантика</span>
+        <span>span: Адаптивність</span>
+        <span>span: Доступність</span>
+        <span>span: Кольори</span>
+        <span>span: Типографіка</span>
+      </div>
+      <!-- Для inline width/height не застосовуються як для блокових елементів; тому задані 200 × 100px у CSS не змінюють розмір div. -->
+    </section>
+
+    <section>
+      <h2>Повторення фону</h2>
+      <p class="section-note">Один малюнок використано з різними значеннями background-repeat.</p>
+      <div class="repeat-grid">
+        <div class="repeat-box repeat-x"><span>repeat-x</span></div>
+        <div class="repeat-box repeat-y"><span>repeat-y</span></div>
+        <div class="repeat-box space"><span>space</span></div>
+        <div class="repeat-box round"><span>round</span></div>
+      </div>
+      <!-- space рівномірно розподіляє цілі зображення з проміжками; round масштабує зображення, щоб умістити ціле число повторів. -->
+    </section>
+
+    <section>
+      <h2>Масштабування фону</h2>
+      <div class="size-grid">
+        <div class="size-box contain"><span>background-size: contain</span></div>
+        <div class="size-box cover"><span>background-size: cover</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Прокручування фону всередині блока</h2>
+      <p class="section-note">Прокрутіть текст у кожному контейнері. У першого фон лишається відносно блока, у другого прокручується разом із вмістом.</p>
+      <div class="attachment-grid">
+        <div class="attachment scroll-bg">
+          <strong>background-attachment: scroll</strong>
+          <p>Це довгий текст для демонстрації прокручування вмісту. Коли контейнер прокручується, фонове зображення залишається прив’язаним до області елемента, а текст рухається поверх нього.</p>
+          <p>Повторюємо текст, щоб з’явилася внутрішня прокрутка. Перевірте різницю між властивостями, використовуючи колесо миші або жести на сенсорному екрані.</p>
+          <p>CSS дає змогу керувати зображенням фону окремо від самого вмісту, а значення local пов’язує фон із прокручуваним вмістом контейнера.</p>
+        </div>
+        <div class="attachment local-bg">
+          <strong>background-attachment: local</strong>
+          <p>Це довгий текст для демонстрації прокручування вмісту. Коли контейнер прокручується, фонове зображення залишається прив’язаним до області елемента, а текст рухається поверх нього.</p>
+          <p>Повторюємо текст, щоб з’явилася внутрішня прокрутка. Перевірте різницю між властивостями, використовуючи колесо миші або жести на сенсорному екрані.</p>
+          <p>CSS дає змогу керувати зображенням фону окремо від самого вмісту, а значення local пов’язує фон із прокручуваним вмістом контейнера.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Дякую за перегляд моєї навчальної сторінки.</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 28px;
+    color: #203047;
+    font: 16px/1.5 Arial, sans-serif;
+    background: #f3f7fb;
+}
+
+main { max-width: 1380px; margin: 0 auto; }
+h1 { margin-top: 0; }
+.examples { font-size: 0; }
+.tile {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(20, 55, 75, .25);
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 8px 18px rgba(27, 55, 80, .12);
+}
+.tile span {
+    display: inline-block;
+    padding: 8px 10px;
+    color: #13324a;
+    font-weight: 700;
+    background: rgba(255, 255, 255, .78);
+    border-radius: 5px;
+}
+
+/* 1. Чіткі кольорові межі на 50%; крок візерунка 40 × 40 px. */
+.tile-one {
+    background: linear-gradient(45deg, #0f766e 50%, #99f6e4 50%);
+    background-size: 40px 40px;
+}
+
+/* 2. Два напівпрозорі лінійні градієнти утворюють клітинки. */
+.tile-two {
+    background-color: #d1fae5;
+    background-image:
+        linear-gradient(transparent 50%, rgba(15, 118, 110, .42) 50%),
+        linear-gradient(90deg, transparent 50%, rgba(15, 118, 110, .42) 50%);
+    background-size: 32px 32px;
+}
+
+/* 3. Круг із заданою позицією, трьома кольорами й розміром farthest-corner. */
+.tile-three {
+    background: radial-gradient(circle farthest-corner at 30px 20px,
+        #ecfdf5 0%,
+        #34d399 38%,
+        #065f46 100%);
+}
+
+/* 4. Напівпрозорий градієнт розташовано знизу; базовий колір залишається видимим. */
+.tile-four {
+    background-color: #5eead4;
+    background-image: linear-gradient(to top, rgba(6, 78, 59, .65), rgba(6, 78, 59, 0));
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
+
+@media (max-width: 760px) {
+    body { padding: 12px; }
+    .tile { margin: 10px 0; max-width: 100%; }
+}

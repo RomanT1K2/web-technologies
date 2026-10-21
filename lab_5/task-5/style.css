@@ -1,0 +1,86 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 28px 18px;
+    color: #18263b;
+    font: 16px/1.5 Arial, sans-serif;
+    background: #f4f7fb;
+}
+main { max-width: 1100px; margin: 0 auto; }
+h1 { margin-top: 0; color: #183b65; }
+section { margin: 30px 0; }
+h2 { color: #25635f; font-size: 1.25rem; }
+
+.box-demo {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    margin: 10px 20px 10px 0;
+    border: 5px solid;
+    border-radius: 8px;
+}
+.box-demo p { margin-bottom: 0; }
+.content-box {
+    box-sizing: content-box;
+    background: #dbeafe;
+    border-color: #2563eb;
+    /* Загальна ширина = 300 + 2 × 20 + 2 × 5 = 350px. */
+}
+.border-box {
+    box-sizing: border-box;
+    background: #d1fae5;
+    border-color: #0f766e;
+    /* Загальна ширина = 300px: padding і border входять у задану ширину. */
+}
+
+.overflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+.overflow-demo {
+    min-width: 0;
+    max-height: 80px;
+    padding: 10px;
+    border: 2px solid #61748b;
+    border-radius: 6px;
+    background: white;
+}
+.overflow-demo p { margin: 8px 0 0; }
+.visible { overflow: visible; border-color: #b45309; }
+.hidden { overflow: hidden; border-color: #be123c; }
+.scroll { overflow: scroll; border-color: #1d4ed8; }
+.auto { overflow: auto; border-color: #047857; }
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #183b65;
+    border-radius: 8px;
+}
+.menu li { display: inline-block; }
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.menu a:hover { background: #25635f; }
+/* display:none прибирає пункт і його місце з розкладки повністю.
+   На відміну від visibility:hidden (місце лишається), елемент не займає простору. */
+.menu li:nth-child(4) { display: none; }
+.note { padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; }
+code { padding: 2px 5px; background: #e2e8f0; border-radius: 4px; }
+
+@media (max-width: 900px) {
+    .overflow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+    .overflow-grid { grid-template-columns: 1fr; }
+    .box-demo { display: block; max-width: 100%; margin-right: 0; }
+    .menu li { display: block; }
+}
