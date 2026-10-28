@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 1</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 28px 16px;
+      background: #f2f4f6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Полотно, відносно якого позиціонуються блоки */
+    .stage {
+      position: relative;
+      width: min(100%, 1090px);
+      aspect-ratio: 1090 / 332;
+      min-height: 245px;
+      margin: 0 auto;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .block {
+      position: absolute;
+      border: 3px solid #333;
+      text-align: center;
+      font-size: clamp(16px, 2.75vw, 30px);
+      line-height: 1.8;
+      padding-top: 1.1%;
+      font-weight: 400;
+      overflow: hidden;
+    }
+
+    .blue {
+      left: 1.45%;
+      top: 26.2%;
+      width: 33.6%;
+      height: 69.4%;
+      color: #f4f4f4;
+      background: #548dd0;
+      z-index: 1;
+    }
+
+    .green {
+      left: 34.9%;
+      top: 2.1%;
+      width: 32.2%;
+      height: 59.7%;
+      color: #062d22;
+      background: #00b65c;
+      z-index: 3;
+    }
+
+    .cyan {
+      left: 66.7%;
+      top: 33.5%;
+      width: 31.8%;
+      height: 100%;
+      color: #152b30;
+      background: #91cfdd;
+      z-index: 2;
+    }
+
+    /* Тонкі напівпрозорі лінії відтворюють вигляд на зразку. */
+    .line {
+      position: absolute;
+      display: block;
+      pointer-events: none;
+      background: rgba(255, 255, 255, 0.42);
+    }
+    .v { width: 2px; top: 0; bottom: 0; }
+    .h { height: 2px; left: 0; right: 0; }
+
+    .blue .v1 { left: 18%; top: 25%; }
+    .blue .v2 { left: 67%; top: 52%; }
+    .blue .v3 { left: 72%; top: 52%; }
+    .blue .h1 { top: 25%; right: 82%; }
+    .blue .h2 { top: 36%; left: 18%; }
+    .blue .h3 { top: 51%; left: 18%; }
+
+    .green .v1 { left: 7%; top: 30%; }
+    .green .v2 { left: 17%; top: 30%; }
+    .green .v3 { left: 32%; top: 30%; }
+    .green .v4 { left: 47%; top: 53%; }
+    .green .v5 { left: 59%; top: 53%; }
+    .green .v6 { left: 66%; top: 53%; }
+    .green .v7 { left: 71%; top: 53%; }
+    .green .h1 { top: 53%; }
+    .green .h2 { top: 64%; }
+
+    .cyan .v1 { left: 10%; }
+    .cyan .v2 { left: 44%; top: 53%; }
+    .cyan .v3 { left: 54%; top: 53%; }
+    .cyan .v4 { left: 93%; top: 53%; }
+    .cyan .h1 { top: 28%; }
+
+  
+  </style>
+</head>
+<body>
+  <main class="stage" aria-label="Три кольорові блоки, розташовані за допомогою CSS position">
+    <div class="block blue">
+      Текст всередині<br>блоку
+      <i class="line v v1"></i><i class="line v v2"></i><i class="line v v3"></i>
+      <i class="line h h1"></i><i class="line h h2"></i><i class="line h h3"></i>
+    </div>
+
+    <div class="block green">
+      Текст всередині<br>блоку
+      <i class="line v v1"></i><i class="line v v2"></i><i class="line v v3"></i>
+      <i class="line v v4"></i><i class="line v v5"></i><i class="line v v6"></i><i class="line v v7"></i>
+      <i class="line h h1"></i><i class="line h h2"></i>
+    </div>
+
+    <div class="block cyan">
+      Текст всередині<br>блоку
+      <i class="line v v1"></i><i class="line v v2"></i><i class="line v v3"></i><i class="line v v4"></i>
+      <i class="line h h1"></i>
+    </div>
+  </main>
+</body>
+</html>

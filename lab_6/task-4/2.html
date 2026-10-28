@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Завдання 4.Вертикаль</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; }
+
+  /* ===== ФІКСОВАНА ПАНЕЛЬ НА ВСЮ ВИСОТУ ===== */
+  .sidenav {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;               /* повна висота вікна (аналог top:0 + bottom:0) */
+    width: 220px;
+    background: #0066b3;
+    z-index: 1000;
+  }
+  .sidenav ul { list-style: none; }
+
+  .sidenav li { position: relative; }   /* точка відліку для підменю */
+
+  .sidenav a {
+    display: flex;               /* піктограма + текст в один рядок */
+    align-items: center;
+    gap: 12px;
+    height: 52px;
+    padding: 0 16px;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,.45);
+  }
+
+  /* hover та активний пункт */
+  .sidenav a:hover { background: #004f8c; }
+  .sidenav a.active { background: #003d6e; font-weight: bold; }
+
+  /* стрілочка, що показує наявність підменю */
+  .sidenav .arrow { margin-left: auto; font-size: 20px; }
+
+  /* ===== ВИПАДНІ РІВНІ (2-й і 3-й) ===== */
+  .sidenav ul ul {
+    display: none;
+    position: absolute;
+    top: 0;                      /* вирівнюємо по верху батьківського пункту */
+    left: 100%;                  /* відкриваємо праворуч від батька */
+    width: 220px;
+    background: #1a7fcb;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.3);
+  }
+  .sidenav li:hover > ul { display: block; }
+
+  .sidenav ul ul a { height: 46px; font-size: 15px; }
+  .sidenav ul ul ul { background: #3b97dd; }   /* 3-й рівень трохи світліший */
+
+  /* ===== Контент зсунутий вправо на ширину панелі ===== */
+  main { margin-left: 220px; padding: 40px; }
+</style>
+</head>
+<body>
+
+<nav class="sidenav">
+  <ul>                                         <!-- 1-й рівень -->
+    <li>
+      <a href="#" class="active">
+        <span class="material-icons">home</span>Головна
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <span class="material-icons">article</span>Про нас
+        <span class="material-icons arrow">chevron_right</span>
+      </a>
+      <ul>                                     <!-- 2-й рівень -->
+        <li>
+          <a href="#">Команда <span class="material-icons arrow">chevron_right</span></a>
+          <ul>                                 <!-- 3-й рівень -->
+            <li><a href="#">Розробники</a></li>
+            <li><a href="#">Дизайнери</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Історія</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">
+        <span class="material-icons">coffee</span>Співпраця
+        <span class="material-icons arrow">chevron_right</span>
+      </a>
+      <ul>
+        <li><a href="#">Послуги</a></li>
+        <li>
+          <a href="#">Проєкти <span class="material-icons arrow">chevron_right</span></a>
+          <ul>
+            <li><a href="#">Веб</a></li>
+            <li><a href="#">Мобільні</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#"><span class="material-icons">mail</span>Контакти</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Вертикальна навігація</h1>
+  <p>Панель зафіксована зліва на всю висоту вікна.</p>
+</main>
+
+</body>
+</html>
